@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GAHeaderView" customModule="GAScrollViewNestDemo" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GAHeaderView" customModule="GAScrollViewNestDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wz-E9-tlu">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUa-W9-OX7">
+                            <rect key="frame" x="0.0" y="0.0" width="828" height="200"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GlD-Jc-xDD">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oBB-G3-XTU">
+                                    <rect key="frame" x="414" y="0.0" width="414" height="200"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="oBB-G3-XTU" secondAttribute="trailing" id="0qa-OL-bNC"/>
+                                <constraint firstItem="oBB-G3-XTU" firstAttribute="leading" secondItem="GlD-Jc-xDD" secondAttribute="trailing" id="5kg-7l-gSc"/>
+                                <constraint firstAttribute="bottom" secondItem="oBB-G3-XTU" secondAttribute="bottom" id="Gdz-Ah-w95"/>
+                                <constraint firstItem="oBB-G3-XTU" firstAttribute="width" secondItem="GlD-Jc-xDD" secondAttribute="width" id="Jqk-R6-R2w"/>
+                                <constraint firstItem="GlD-Jc-xDD" firstAttribute="top" secondItem="cUa-W9-OX7" secondAttribute="top" id="Lks-Ee-zqO"/>
+                                <constraint firstAttribute="width" constant="828" id="Ql1-yZ-Paj"/>
+                                <constraint firstItem="oBB-G3-XTU" firstAttribute="top" secondItem="cUa-W9-OX7" secondAttribute="top" id="WWb-H8-PPg"/>
+                                <constraint firstItem="GlD-Jc-xDD" firstAttribute="leading" secondItem="cUa-W9-OX7" secondAttribute="leading" id="Zmg-Oq-WEr"/>
+                                <constraint firstAttribute="bottom" secondItem="GlD-Jc-xDD" secondAttribute="bottom" id="sq6-Sd-3ap"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="cUa-W9-OX7" firstAttribute="centerY" secondItem="5Wz-E9-tlu" secondAttribute="centerY" id="4XA-BO-5fg"/>
+                        <constraint firstAttribute="trailing" secondItem="cUa-W9-OX7" secondAttribute="trailing" id="AAC-VT-tEh"/>
+                        <constraint firstItem="cUa-W9-OX7" firstAttribute="top" secondItem="5Wz-E9-tlu" secondAttribute="top" id="NoS-Qy-jj8"/>
+                        <constraint firstItem="cUa-W9-OX7" firstAttribute="leading" secondItem="5Wz-E9-tlu" secondAttribute="leading" id="kCj-d5-QlT"/>
+                        <constraint firstAttribute="bottom" secondItem="cUa-W9-OX7" secondAttribute="bottom" id="x78-S0-seC"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5Wz-E9-tlu" secondAttribute="trailing" id="6tV-Yu-U6G"/>
+                <constraint firstItem="5Wz-E9-tlu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HXv-Ek-l4i"/>
+                <constraint firstAttribute="bottom" secondItem="5Wz-E9-tlu" secondAttribute="bottom" id="aQu-QX-mSe"/>
+                <constraint firstItem="5Wz-E9-tlu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fZg-X3-cLm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="scrollWConstraint" destination="Ql1-yZ-Paj" id="dwl-2Y-zgU"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="94.419642857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GAListVC" customModule="GAScrollViewNestDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="bgHConstraint" destination="ZNC-JF-EJL" id="jK3-4G-rFd"/>
+                <outlet property="bgView" destination="WBQ-Nq-Z8q" id="VEb-bu-TIc"/>
+                <outlet property="scrollView" destination="pF6-FW-31e" id="nE2-LS-Slm"/>
+                <outlet property="view" destination="iN0-l3-epB" id="LmC-gJ-icy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pF6-FW-31e" customClass="NestScrollView" customModule="GAScrollViewNestDemo" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBQ-Nq-Z8q">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1000" id="ZNC-JF-EJL"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="WBQ-Nq-Z8q" secondAttribute="bottom" id="02f-d6-5f0"/>
+                        <constraint firstItem="WBQ-Nq-Z8q" firstAttribute="top" secondItem="pF6-FW-31e" secondAttribute="top" id="KUA-r6-jQw"/>
+                        <constraint firstAttribute="trailing" secondItem="WBQ-Nq-Z8q" secondAttribute="trailing" id="MAU-3p-KQU"/>
+                        <constraint firstItem="WBQ-Nq-Z8q" firstAttribute="centerX" secondItem="pF6-FW-31e" secondAttribute="centerX" id="i3Z-aZ-qkp"/>
+                        <constraint firstItem="WBQ-Nq-Z8q" firstAttribute="leading" secondItem="pF6-FW-31e" secondAttribute="leading" id="oa9-my-UOd"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="tiZ-OW-ppt"/>
+                    </connections>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Th-xH-2aj">
+                    <rect key="frame" x="10" y="44" width="30" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="1gx-Ky-w3S"/>
+                        <constraint firstAttribute="height" constant="30" id="KmK-hU-vfP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="&lt;">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="tapReturnAction:" destination="-1" eventType="touchUpInside" id="fmH-ci-Efu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pF6-FW-31e" secondAttribute="trailing" id="2Cr-oK-jhi"/>
+                <constraint firstItem="6Th-xH-2aj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Fg7-sB-GRD"/>
+                <constraint firstItem="pF6-FW-31e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="M99-qN-dLz"/>
+                <constraint firstItem="pF6-FW-31e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Q9z-WZ-obq"/>
+                <constraint firstAttribute="bottom" secondItem="pF6-FW-31e" secondAttribute="bottom" id="VAY-fL-yfQ"/>
+                <constraint firstItem="6Th-xH-2aj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="44" id="qE7-A3-Uup"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

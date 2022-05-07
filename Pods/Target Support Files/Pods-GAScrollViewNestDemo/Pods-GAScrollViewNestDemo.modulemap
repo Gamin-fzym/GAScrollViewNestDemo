@@ -1,0 +1,6 @@
+framework module Pods_GAScrollViewNestDemo {
+  umbrella header "Pods-GAScrollViewNestDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GACategoryCell" customModule="GAScrollViewNestDemo" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GACategoryCell" customModule="GAScrollViewNestDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zx-og-aMb">
+                    <rect key="frame" x="0.0" y="0.0" width="120" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="uOo-st-Vic"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7Zx-og-aMb" secondAttribute="trailing" id="SnO-vU-Via"/>
+                <constraint firstAttribute="bottom" secondItem="7Zx-og-aMb" secondAttribute="bottom" id="ehw-w3-Rag"/>
+                <constraint firstItem="7Zx-og-aMb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fK4-HO-Oxk"/>
+                <constraint firstItem="7Zx-og-aMb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hie-30-6VW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLab" destination="7Zx-og-aMb" id="Uwb-S7-eRx"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="95"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

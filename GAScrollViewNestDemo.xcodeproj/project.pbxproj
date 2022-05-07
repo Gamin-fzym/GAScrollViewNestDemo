@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04084D722824B42A0012AC5C /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04084D712824B42A0012AC5C /* UIDevice+Extensions.swift */; };
+		04084D742824BC940012AC5C /* GAHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04084D732824BC940012AC5C /* GAHeaderView.swift */; };
+		04084D762824BCD70012AC5C /* GAHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04084D752824BCD70012AC5C /* GAHeaderView.xib */; };
+		04084D782824C3DE0012AC5C /* GACategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04084D772824C3DE0012AC5C /* GACategoryCell.swift */; };
+		04084D7A2824C4110012AC5C /* GACategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04084D792824C4110012AC5C /* GACategoryCell.xib */; };
+		04084D7D2824C5820012AC5C /* GACategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04084D7C2824C5820012AC5C /* GACategoryModel.swift */; };
+		046A06632823C60000F489E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A06622823C60000F489E7 /* AppDelegate.swift */; };
+		046A06672823C60000F489E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A06662823C60000F489E7 /* ViewController.swift */; };
+		046A066A2823C60000F489E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046A06682823C60000F489E7 /* Main.storyboard */; };
+		046A066C2823C60200F489E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046A066B2823C60200F489E7 /* Assets.xcassets */; };
+		046A066F2823C60200F489E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046A066D2823C60200F489E7 /* LaunchScreen.storyboard */; };
+		046A06792823C7A000F489E7 /* GAHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A06782823C7A000F489E7 /* GAHomeVC.swift */; };
+		046A067B2823C7D800F489E7 /* GAHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046A067A2823C7D800F489E7 /* GAHomeVC.xib */; };
+		046A067E2823C9E400F489E7 /* GAListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A067D2823C9E400F489E7 /* GAListVC.swift */; };
+		046A06802823CA3E00F489E7 /* GAListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046A067F2823CA3E00F489E7 /* GAListVC.xib */; };
+		046A06822823CA7500F489E7 /* GAContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A06812823CA7500F489E7 /* GAContentVC.swift */; };
+		046A06842823CAF800F489E7 /* GAContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046A06832823CAF800F489E7 /* GAContentVC.xib */; };
+		046A06882823CB5800F489E7 /* GAListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A06872823CB5800F489E7 /* GAListCell.swift */; };
+		046A068A2823CBBE00F489E7 /* GAListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046A06892823CBBE00F489E7 /* GAListCell.xib */; };
+		046A068C2823DC8E00F489E7 /* NestScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A068B2823DC8E00F489E7 /* NestScrollView.swift */; };
+		C71E2397AC95236F4CC92A81 /* Pods_GAScrollViewNestDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0960D4952109085553BF85 /* Pods_GAScrollViewNestDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04084D712824B42A0012AC5C /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
+		04084D732824BC940012AC5C /* GAHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAHeaderView.swift; sourceTree = "<group>"; };
+		04084D752824BCD70012AC5C /* GAHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GAHeaderView.xib; sourceTree = "<group>"; };
+		04084D772824C3DE0012AC5C /* GACategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACategoryCell.swift; sourceTree = "<group>"; };
+		04084D792824C4110012AC5C /* GACategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GACategoryCell.xib; sourceTree = "<group>"; };
+		04084D7C2824C5820012AC5C /* GACategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GACategoryModel.swift; sourceTree = "<group>"; };
+		04084D82282524A60012AC5C /* Nest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nest-Bridging-Header.h"; sourceTree = "<group>"; };
+		046A065F2823C60000F489E7 /* GAScrollViewNestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAScrollViewNestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		046A06622823C60000F489E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		046A06662823C60000F489E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		046A06692823C60000F489E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		046A066B2823C60200F489E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		046A066E2823C60200F489E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		046A06702823C60200F489E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046A06782823C7A000F489E7 /* GAHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAHomeVC.swift; sourceTree = "<group>"; };
+		046A067A2823C7D800F489E7 /* GAHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GAHomeVC.xib; sourceTree = "<group>"; };
+		046A067D2823C9E400F489E7 /* GAListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAListVC.swift; sourceTree = "<group>"; };
+		046A067F2823CA3E00F489E7 /* GAListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GAListVC.xib; sourceTree = "<group>"; };
+		046A06812823CA7500F489E7 /* GAContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAContentVC.swift; sourceTree = "<group>"; };
+		046A06832823CAF800F489E7 /* GAContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GAContentVC.xib; sourceTree = "<group>"; };
+		046A06872823CB5800F489E7 /* GAListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAListCell.swift; sourceTree = "<group>"; };
+		046A06892823CBBE00F489E7 /* GAListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GAListCell.xib; sourceTree = "<group>"; };
+		046A068B2823DC8E00F489E7 /* NestScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestScrollView.swift; sourceTree = "<group>"; };
+		362A91A05299E41A1ECDDE68 /* Pods-GAScrollViewNestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAScrollViewNestDemo.debug.xcconfig"; path = "Target Support Files/Pods-GAScrollViewNestDemo/Pods-GAScrollViewNestDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D44C5217BA6F640BC3C61D0D /* Pods-GAScrollViewNestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAScrollViewNestDemo.release.xcconfig"; path = "Target Support Files/Pods-GAScrollViewNestDemo/Pods-GAScrollViewNestDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FE0960D4952109085553BF85 /* Pods_GAScrollViewNestDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GAScrollViewNestDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		046A065C2823C60000F489E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C71E2397AC95236F4CC92A81 /* Pods_GAScrollViewNestDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04084D702824B3630012AC5C /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				046A068B2823DC8E00F489E7 /* NestScrollView.swift */,
+				04084D712824B42A0012AC5C /* UIDevice+Extensions.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		04084D7B2824C5610012AC5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04084D7C2824C5820012AC5C /* GACategoryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04084D83282529340012AC5C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				04084D82282524A60012AC5C /* Nest-Bridging-Header.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		046A06562823C60000F489E7 = {
+			isa = PBXGroup;
+			children = (
+				046A06612823C60000F489E7 /* GAScrollViewNestDemo */,
+				046A06602823C60000F489E7 /* Products */,
+				D70C8DE9C81D6840BF21D1EB /* Pods */,
+				2D6BF1DF5042754ED27189AB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		046A06602823C60000F489E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				046A065F2823C60000F489E7 /* GAScrollViewNestDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		046A06612823C60000F489E7 /* GAScrollViewNestDemo */ = {
+			isa = PBXGroup;
+			children = (
+				046A06622823C60000F489E7 /* AppDelegate.swift */,
+				046A06762823C77400F489E7 /* Business */,
+				04084D702824B3630012AC5C /* Support */,
+				04084D83282529340012AC5C /* Config */,
+				046A06662823C60000F489E7 /* ViewController.swift */,
+				046A06682823C60000F489E7 /* Main.storyboard */,
+				046A066B2823C60200F489E7 /* Assets.xcassets */,
+				046A066D2823C60200F489E7 /* LaunchScreen.storyboard */,
+				046A06702823C60200F489E7 /* Info.plist */,
+			);
+			path = GAScrollViewNestDemo;
+			sourceTree = "<group>";
+		};
+		046A06762823C77400F489E7 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				046A06772823C78600F489E7 /* Home */,
+				046A067C2823C9A000F489E7 /* List */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		046A06772823C78600F489E7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				046A06782823C7A000F489E7 /* GAHomeVC.swift */,
+				046A067A2823C7D800F489E7 /* GAHomeVC.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		046A067C2823C9A000F489E7 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				04084D7B2824C5610012AC5C /* Models */,
+				046A06862823CB2A00F489E7 /* Controllers */,
+				046A06852823CB2400F489E7 /* Views */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		046A06852823CB2400F489E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04084D732824BC940012AC5C /* GAHeaderView.swift */,
+				04084D752824BCD70012AC5C /* GAHeaderView.xib */,
+				04084D772824C3DE0012AC5C /* GACategoryCell.swift */,
+				04084D792824C4110012AC5C /* GACategoryCell.xib */,
+				046A06872823CB5800F489E7 /* GAListCell.swift */,
+				046A06892823CBBE00F489E7 /* GAListCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		046A06862823CB2A00F489E7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				046A067D2823C9E400F489E7 /* GAListVC.swift */,
+				046A067F2823CA3E00F489E7 /* GAListVC.xib */,
+				046A06812823CA7500F489E7 /* GAContentVC.swift */,
+				046A06832823CAF800F489E7 /* GAContentVC.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2D6BF1DF5042754ED27189AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE0960D4952109085553BF85 /* Pods_GAScrollViewNestDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D70C8DE9C81D6840BF21D1EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				362A91A05299E41A1ECDDE68 /* Pods-GAScrollViewNestDemo.debug.xcconfig */,
+				D44C5217BA6F640BC3C61D0D /* Pods-GAScrollViewNestDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		046A065E2823C60000F489E7 /* GAScrollViewNestDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046A06732823C60200F489E7 /* Build configuration list for PBXNativeTarget "GAScrollViewNestDemo" */;
+			buildPhases = (
+				09F5F69EA9DD14A2C4B42DE9 /* [CP] Check Pods Manifest.lock */,
+				046A065B2823C60000F489E7 /* Sources */,
+				046A065C2823C60000F489E7 /* Frameworks */,
+				046A065D2823C60000F489E7 /* Resources */,
+				B77DC018DEF2472904D3CF09 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GAScrollViewNestDemo;
+			productName = GAScrollViewNestDemo;
+			productReference = 046A065F2823C60000F489E7 /* GAScrollViewNestDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		046A06572823C60000F489E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					046A065E2823C60000F489E7 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = 046A065A2823C60000F489E7 /* Build configuration list for PBXProject "GAScrollViewNestDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 046A06562823C60000F489E7;
+			productRefGroup = 046A06602823C60000F489E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				046A065E2823C60000F489E7 /* GAScrollViewNestDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		046A065D2823C60000F489E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046A06842823CAF800F489E7 /* GAContentVC.xib in Resources */,
+				04084D7A2824C4110012AC5C /* GACategoryCell.xib in Resources */,
+				046A066F2823C60200F489E7 /* LaunchScreen.storyboard in Resources */,
+				046A066C2823C60200F489E7 /* Assets.xcassets in Resources */,
+				046A066A2823C60000F489E7 /* Main.storyboard in Resources */,
+				046A068A2823CBBE00F489E7 /* GAListCell.xib in Resources */,
+				04084D762824BCD70012AC5C /* GAHeaderView.xib in Resources */,
+				046A067B2823C7D800F489E7 /* GAHomeVC.xib in Resources */,
+				046A06802823CA3E00F489E7 /* GAListVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09F5F69EA9DD14A2C4B42DE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GAScrollViewNestDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B77DC018DEF2472904D3CF09 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GAScrollViewNestDemo/Pods-GAScrollViewNestDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GAScrollViewNestDemo/Pods-GAScrollViewNestDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GAScrollViewNestDemo/Pods-GAScrollViewNestDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		046A065B2823C60000F489E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046A067E2823C9E400F489E7 /* GAListVC.swift in Sources */,
+				046A06822823CA7500F489E7 /* GAContentVC.swift in Sources */,
+				046A06672823C60000F489E7 /* ViewController.swift in Sources */,
+				04084D782824C3DE0012AC5C /* GACategoryCell.swift in Sources */,
+				046A06882823CB5800F489E7 /* GAListCell.swift in Sources */,
+				046A068C2823DC8E00F489E7 /* NestScrollView.swift in Sources */,
+				04084D722824B42A0012AC5C /* UIDevice+Extensions.swift in Sources */,
+				04084D742824BC940012AC5C /* GAHeaderView.swift in Sources */,
+				04084D7D2824C5820012AC5C /* GACategoryModel.swift in Sources */,
+				046A06792823C7A000F489E7 /* GAHomeVC.swift in Sources */,
+				046A06632823C60000F489E7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		046A06682823C60000F489E7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046A06692823C60000F489E7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		046A066D2823C60200F489E7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046A066E2823C60200F489E7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		046A06712823C60200F489E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		046A06722823C60200F489E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		046A06742823C60200F489E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 362A91A05299E41A1ECDDE68 /* Pods-GAScrollViewNestDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5G5L542228;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GAScrollViewNestDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamin.GAScrollViewNestDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "GAScrollViewNestDemo/Config/Nest-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		046A06752823C60200F489E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D44C5217BA6F640BC3C61D0D /* Pods-GAScrollViewNestDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5G5L542228;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GAScrollViewNestDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamin.GAScrollViewNestDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "GAScrollViewNestDemo/Config/Nest-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		046A065A2823C60000F489E7 /* Build configuration list for PBXProject "GAScrollViewNestDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046A06712823C60200F489E7 /* Debug */,
+				046A06722823C60200F489E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046A06732823C60200F489E7 /* Build configuration list for PBXNativeTarget "GAScrollViewNestDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046A06742823C60200F489E7 /* Debug */,
+				046A06752823C60200F489E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 046A06572823C60000F489E7 /* Project object */;
+}
