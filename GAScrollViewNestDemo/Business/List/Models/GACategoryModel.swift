@@ -11,11 +11,8 @@ struct GACategoryModel {
     var id: String = ""
     var title: String = ""
     var list: [GAListModel] = []
-
-    var isSelect: Bool = false
     var isNull: Bool = false
-    var isSelectFront: Bool = false
-    var isSelectNext: Bool = false
+    var isSelect: Bool = false
 }
 
 struct GAListModel {

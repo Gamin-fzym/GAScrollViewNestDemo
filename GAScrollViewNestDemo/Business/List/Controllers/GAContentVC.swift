@@ -23,10 +23,10 @@ class GAContentVC: UIViewController {
         super.viewDidLoad()
         setupUI()
         tableCanScroll = false
-        NotificationCenter.default.addObserver(self, selector: #selector(tableCanScroll(_:)), name: NSNotification.Name("TableCanScroll"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(tableViewCanScroll(_:)), name: NSNotification.Name("TableViewCanScroll"), object: nil)
     }
     
-    @objc private func tableCanScroll(_ notifi: Notification) {
+    @objc private func tableViewCanScroll(_ notifi: Notification) {
         tableCanScroll = true
     }
     
@@ -51,16 +51,15 @@ class GAContentVC: UIViewController {
     }
        
     func startReloadVC() {
-        loadListData()
+        moniData()
     }
     
 }
 
 extension GAContentVC {
     
-    private func loadListData() {
+    private func moniData() {
         dataArray.removeAll()
-        
         var data: [GACategoryModel] = []
         for i in 0...1 {
             var cModel = GACategoryModel()
@@ -73,12 +72,8 @@ extension GAContentVC {
             }
             data.append(cModel)
         }
-        
         if data.count > 0 {
             data[0].isSelect = true
-            if data.count > 1 {
-                data[1].isSelectNext = true
-            }
         }
         dataArray = data
         handleDataAction()
@@ -160,20 +155,12 @@ extension GAContentVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == cateTableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GACategoryCell", for: indexPath) as! GACategoryCell
-            if indexPath.row < dataArray.count {
-                cell.model = dataArray[indexPath.row]
-            } else {
-                cell.model = nil
-            }
+            cell.model = dataArray[indexPath.row]
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GAListCell", for: indexPath) as! GAListCell
             if let selModel = gainSelectModel() {
-                if selModel.list.count > indexPath.row {
-                    cell.model = selModel.list[indexPath.row]
-                } else {
-                    cell.model = nil
-                }
+                cell.model = selModel.list[indexPath.row]
             } else {
                 cell.model = nil
             }
@@ -183,42 +170,24 @@ extension GAContentVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == cateTableView {
-            if let cell = tableView.cellForRow(at: indexPath) as? GACategoryCell, let model = cell.model {
-                if model.isNull {
-                    return
-                }
-                var curIndex = -1
-                for (index, _) in dataArray.enumerated() {
-                    if index == indexPath.row {
-                        dataArray[index].isSelect = true
-                        curIndex = index
-                    } else {
-                        dataArray[index].isSelect = false
-                    }
-                    dataArray[index].isSelectFront = false
-                    dataArray[index].isSelectNext = false
-                }
-                if curIndex != -1 {
-                    if curIndex - 1 >= 0 {
-                        dataArray[curIndex - 1].isSelectFront = true
-                    }
-                    if curIndex + 1 < dataArray.count {
-                        dataArray[curIndex + 1].isSelectNext = true
-                    }
-                }
-                cateTableView.reloadData()
-                listTableView.contentOffset = CGPoint(x: 0, y: 0)
-                listTableView.reloadData()
+            guard let cell = tableView.cellForRow(at: indexPath) as? GACategoryCell, let model = cell.model, !model.isNull else {
+                return
             }
+            for (index, _) in dataArray.enumerated() {
+                if index == indexPath.row {
+                    dataArray[index].isSelect = true
+                } else {
+                    dataArray[index].isSelect = false
+                }
+            }
+            cateTableView.reloadData()
+            listTableView.contentOffset = CGPoint(x: 0, y: 0)
+            listTableView.reloadData()
         } else {
-            if let cell = tableView.cellForRow(at: indexPath) as? GAListCell, let model = cell.model {
-                if model.isNull {
-                    return
-                }
-//                if let topVC = ScreenUIManager.topViewController() {
-//                    RouteConfig.pushWithRoute(vc: topVC, route: model)
-//                }
+            guard let cell = tableView.cellForRow(at: indexPath) as? GAListCell, let model = cell.model, !model.isNull else {
+                return
             }
+            // 进入详情
         }
     }
     
@@ -228,19 +197,15 @@ extension GAContentVC: UIScrollViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if tableCanScroll == false {
-            print("GAContentVC1 scrollViewDidScroll=\(scrollView.contentOffset)")
             scrollView.contentOffset = CGPoint.zero
         } else if (scrollView.contentOffset.y <= 0) {
-            print("GAContentVC2 scrollViewDidScroll=\(scrollView.contentOffset)")
             tableCanScroll = false
-            // 通知ScrollView改变ScrollView的CanScroll状态
-            NotificationCenter.default.post(name: NSNotification.Name("ScrollCanScroll"), object: nil, userInfo: nil)
-        } else {
-            print("GAContentVC3 scrollViewDidScroll=\(scrollView.contentOffset)")
+            // 通知ScrollView改变CanScroll的状态
+            NotificationCenter.default.post(name: NSNotification.Name("ScrollViewCanScroll"), object: nil, userInfo: nil)
         }
     }
     
-    /// 解决一个问题。列表1的y坐标为0时，向上滚动列表2后，再回头滚动列表1，这时列表1滚动不响应。
+    /// 解决一个问题。列表1的y坐标为0时，向上滚动列表2后，再回头向下滚动列表1，这时列表1滚动不响应。
     func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
         if scrollView == cateTableView {
             let listOffset = listTableView.contentOffset

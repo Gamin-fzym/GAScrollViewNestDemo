@@ -32,10 +32,10 @@ class GAListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        NotificationCenter.default.addObserver(self, selector: #selector(scrollCanScroll(_:)), name: NSNotification.Name("ScrollCanScroll"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ScrollViewCanScroll(_:)), name: NSNotification.Name("ScrollViewCanScroll"), object: nil)
     }
     
-    @objc private func scrollCanScroll(_ notifi: Notification) {
+    @objc private func ScrollViewCanScroll(_ notifi: Notification) {
         canScroll = true
     }
  
@@ -94,7 +94,7 @@ extension GAListVC: UIScrollViewDelegate {
             scrollView.contentOffset = CGPoint(x: 0, y: topOffset)
             self.canScroll = false
             // 滑动到顶部，通知嵌套tableView改变tableCanScroll的状态
-            NotificationCenter.default.post(name: NSNotification.Name("TableCanScroll"), object: nil, userInfo: nil)
+            NotificationCenter.default.post(name: NSNotification.Name("TableViewCanScroll"), object: nil, userInfo: nil)
         }
     }
     
